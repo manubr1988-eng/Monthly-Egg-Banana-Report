@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <title>ಪಿ.ಎಂ. ಪೋಷಣ್ - ನಮೂನೆ 7</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; font-size: 8px; padding: 10px; background-color: #f9f9f9; }
+        table { width: 100%; border-collapse: collapse; margin-top: 5px; table-layout: fixed; background-color: #fff; }
+        th, td { border: 1px solid #333; padding: 3px; text-align: center; }
+        
+        h3 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .header-section { 
+            background: linear-gradient(to right, #3498db, #2980b9); 
+            color: white; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-weight: bold; 
+        }
+        .header-section input { color: #000; font-weight: bold; border-radius: 3px; padding: 2px; }
+
+        th { background-color: #34495e; color: white; }
+        
+        .col-small { width: 30px; }
+        .col-attendance { width: 50px; } 
+        .col-week { width: 60px; }
+        /* ಬಾಳೆಹಣ್ಣಿನ ಕಾಲಂ ಅಗಲ ಹೆಚ್ಚಿಸಲಾಗಿದೆ */
+        .col-banana { width: 60px; } 
+        
+        input, select { width: 100%; border: 1px solid #ccc; text-align: center; box-sizing: border-box; font-size: 8px; font-weight: bold; }
+        
+        .day-color option:nth-child(2) { color: #e67e22; } /* ಸೋಮವಾರ */
+        .day-color option:nth-child(3) { color: #f1c40f; } /* ಮಂಗಳವಾರ */
+        .day-color option:nth-child(4) { color: #27ae60; } /* ಬುಧವಾರ */
+        .day-color option:nth-child(5) { color: #2980b9; } /* ಗುರುವಾರ */
+        .day-color option:nth-child(6) { color: #8e44ad; } /* ಶುಕ್ರವಾರ */
+        .day-color option:nth-child(7) { color: #c0392b; } /* ಶನಿವಾರ */
+
+        .footer-row { font-weight: bold; background-color: #27ae60 !important; color: white; }
+        .sig-table { margin-top: 20px; border: none; }
+        .sig-table td { border: none; padding: 15px; text-align: center; vertical-align: bottom; color: #2c3e50; font-weight: bold; }
+        .creator-name { font-size: 10px; font-style: italic; color: #f1c40f; float: right; }
+    </style>
+</head>
+<body>
+
+<h3 style="text-align: center;">2026-27 ನೇ ಸಾಲಿನ ಪಿ.ಎಂ. ಪೋಷಣ್ -ಮಧ್ಯಾಹ್ನ ಉಪಹಾರ ಯೋಜನೆಯ ದೈನಂದಿನ ಪೂರಕ ಪೌಷ್ಟಿಕ ಆಹಾರ (ಮೊಟ್ಟೆ/ಬಾಳೆಹಣ್ಣು) ವಿತರಣೆ ನಮೂನೆ</h3>
+
+<div class="header-section">
+    ಶಾಲೆಯ ಹೆಸರು: <input type="text" style="width: 200px;"> &nbsp; ಕ್ಲಸ್ಟರ್: <input type="text" style="width: 150px;"> &nbsp; ತಿಂಗಳು/ವರ್ಷ: <input type="text" style="width: 100px;"> 
+    <span class="creator-name">ರಚನೆ: ಮನೋಹರ್ ಕೆಜಿಎಫ್</span>
+</div>
+
+<table style="margin-bottom: 10px;">
+    <tr style="background-color: #ecf0f1;"><th>ತರಗತಿ</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>ಒಟ್ಟು</th></tr>
+    <tr>
+        <td>ಮಕ್ಕಳ ಸಂಖ್ಯೆ</td>
+        <td><input type="number" class="cls" oninput="calcEnrol()"></td><td><input type="number" class="cls" oninput="calcEnrol()"></td>
+        <td><input type="number" class="cls" oninput="calcEnrol()"></td><td><input type="number" class="cls" oninput="calcEnrol()"></td>
+        <td><input type="number" class="cls" oninput="calcEnrol()"></td><td><input type="number" class="cls" oninput="calcEnrol()"></td>
+        <td><input type="number" class="cls" oninput="calcEnrol()"></td><td><input type="number" class="cls" oninput="calcEnrol()"></td>
+        <td><input type="number" class="cls" oninput="calcEnrol()"></td><td><input type="number" class="cls" oninput="calcEnrol()"></td>
+        <td id="totalEnrol" style="font-weight:bold; background-color: #dcdde1;">0</td>
+    </tr>
+</table>
+
+<table id="dataTable">
+    <tr>
+        <th style="width: 25px;">ದಿನ</th><th class="col-week">ವಾರ</th><th class="col-attendance">ದಾಖಲಾತಿ</th><th class="col-attendance">ಹಾಜರಾತಿ</th><th>ಮೊಟ್ಟೆ</th><th class="col-banana">ಬಾಳೆ</th><th>ಒಟ್ಟು</th>
+        <th style="width: 25px;">ದಿನ</th><th class="col-week">ವಾರ</th><th class="col-attendance">ದಾಖಲಾತಿ</th><th class="col-attendance">ಹಾಜರಾತಿ</th><th>ಮೊಟ್ಟೆ</th><th class="col-banana">ಬಾಳೆ</th><th>ಒಟ್ಟು</th>
+    </tr>
+    <script>
+        const days = ["ಕ್ಲಿಕ್ ಮಾಡಿ", "ಸೋಮ", "ಮಂಗಳ", "ಬುಧ", "ಗುರು", "ಶುಕ್ರ", "ಶನಿ","ಭಾನು"];
+        function getDaySelect() {
+            let html = '<select class="day-color">';
+            days.forEach(d => html += `<option value="${d}">${d}</option>`);
+            return html + '</select>';
+        }
+        for(let i=1; i<=16; i++) {
+            let d2 = (i+16 <= 31) ? (i+16) : "";
+            document.write(`<tr>
+                <td style="background-color:#f1f2f6">${i}</td><td>${getDaySelect()}</td>
+                <td><input type="number"></td><td><input type="number" class="att" oninput="calc()"></td>
+                <td><input type="number" class="egg" oninput="calc()"></td><td><input type="number" class="ban" oninput="calc()"></td>
+                <td class="rowSum" style="background-color:#f1f2f6">0</td>
+                <td style="background-color:#f1f2f6">${d2}</td><td>${d2 ? getDaySelect() : ""}</td>
+                <td><input type="number"></td><td><input type="number" class="att" oninput="calc()"></td>
+                <td><input type="number" class="egg" oninput="calc()"></td><td><input type="number" class="ban" oninput="calc()"></td>
+                <td class="rowSum" style="background-color:#f1f2f6">0</td>
+            </tr>`);
+        }
+    </script>
+</table>
+
+<table style="margin-top:10px;">
+    <tr class="footer-row">
+        <td>ಶಾಲಾ ನಡೆದ ದಿನಗಳು</td><td>ತಿಂಗಳ  ಎಲ್ಲಾ ಮಕ್ಕಳ<br> ಒಟ್ಟು ಹಾಜರಾತಿ</td><td> ತಿಂಗಳ ಒಟ್ಟು ಮೊಟ್ಟೆ <br>ಫಲಾನುಭವಿಗಳ ಸಂಖ್ಯೆ</td><td>ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು <br> ಫಲಾನುಭವಿಗಳ ಸಂಖ್ಯೆ</td>
+        <td> ತಿಂಗಳ  ಮೊಟ್ಟೆ & ಬಾಳೆ ಒಟ್ಟು ಫಲಾನುಭವಿಗಳು</td><td> ತಿಂಗಳ ಒಟ್ಟು ಮೊಟ್ಟೆ<br> ಖರೀದಿ ವೆಚ್ಚ (x6)</td><td> ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು<br> ಖರೀದಿ ವೆಚ್ಚ (x6)</td><td>ತಿಂಗಳ ಒಟ್ಟು  ಬಾಳೆಹಣ್ಣು<br>ಮೊಟ್ಟೆ ಖರೀದಿ ವೆಚ್ಚ</td>
+    </tr>
+    <tr>
+        <td id="fDays">0</td><td id="fAtt">0</td><td id="fEgg">0</td><td id="fBan">0</td>
+        <td id="fSum">0</td><td id="fCostE">0</td><td id="fCostB">0</td><td id="fTotal">0</td>
+    </tr>
+</table>
+
+<table class="sig-table">
+    <tr>
+        <td>_______________________<br>ಮುಖ್ಯ ಅಡುಗೆಯವರ ಸಹಿ</td>
+        <td>_______________________<br>ನೋಡಲ್ ಶಿಕ್ಷಕರ ಸಹಿ</td>
+        <td>_______________________<br>ಮುಖ್ಯ ಶಿಕ್ಷಕರ ಸಹಿ</td>
+    </tr>
+</table>
+
+<script>
+    function calcEnrol() {
+        let total = 0; document.querySelectorAll('.cls').forEach(i => total += Number(i.value));
+        document.getElementById('totalEnrol').innerText = total;
+    }
+    function calc() {
+        let atts = document.querySelectorAll('.att'), eggs = document.querySelectorAll('.egg'), bans = document.querySelectorAll('.ban');
+        let fDays=0, fAtt=0, fEgg=0, fBan=0;
+        document.querySelectorAll('.rowSum').forEach((el, i) => { el.innerText = Number(eggs[i].value) + Number(bans[i].value); });
+        atts.forEach(a => { if(Number(a.value) > 0) fDays++; fAtt += Number(a.value); });
+        eggs.forEach(e => fEgg += Number(e.value)); bans.forEach(b => fBan += Number(b.value));
+        document.getElementById('fDays').innerText = fDays; document.getElementById('fAtt').innerText = fAtt;
+        document.getElementById('fEgg').innerText = fEgg; document.getElementById('fBan').innerText = fBan;
+        document.getElementById('fSum').innerText = fEgg + fBan;
+        document.getElementById('fCostE').innerText = fEgg * 6; document.getElementById('fCostB').innerText = fBan * 6;
+        document.getElementById('fTotal').innerText = (fEgg + fBan) * 6;
+    }
+</script>
+
+</body>
+</html>
