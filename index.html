@@ -4,43 +4,44 @@
     <meta charset="UTF-8">
     <title>ಪಿ.ಎಂ. ಪೋಷಣ್ - ನಮೂನೆ 7</title>
     <style>
-        body { font-family: 'Arial', sans-serif; font-size: 8px; padding: 10px; background-color: #f9f9f9; }
+        /* ಫಾಂಟ್ ಗಾತ್ರವನ್ನು 8px ನಿಂದ 11px ಗೆ ಹೆಚ್ಚಿಸಲಾಗಿದೆ */
+        body { font-family: 'Arial', sans-serif; font-size: 11px; padding: 10px; background-color: #f9f9f9; }
         table { width: 100%; border-collapse: collapse; margin-top: 5px; table-layout: fixed; background-color: #fff; }
-        th, td { border: 1px solid #333; padding: 3px; text-align: center; }
+        th, td { border: 1px solid #333; padding: 5px; text-align: center; }
         
         h3 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
         .header-section { 
             background: linear-gradient(to right, #3498db, #2980b9); 
             color: white; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-weight: bold; 
         }
-        .header-section input { color: #000; font-weight: bold; border-radius: 3px; padding: 2px; }
+        .header-section input { color: #000; font-weight: bold; border-radius: 3px; padding: 4px; }
 
         th { background-color: #34495e; color: white; }
         
-        .col-small { width: 30px; }
-        .col-attendance { width: 50px; } 
-        .col-week { width: 60px; }
-        /* ಬಾಳೆಹಣ್ಣಿನ ಕಾಲಂ ಅಗಲ ಹೆಚ್ಚಿಸಲಾಗಿದೆ */
-        .col-banana { width: 60px; } 
+        /* ಕಾಲಂ ಗಾತ್ರ */
+        .col-std { width: 40px; } 
         
-        input, select { width: 100%; border: 1px solid #ccc; text-align: center; box-sizing: border-box; font-size: 8px; font-weight: bold; }
+        input, select { width: 100%; border: 1px solid #ccc; text-align: center; box-sizing: border-box; font-size: 11px; font-weight: bold; padding: 2px; }
         
-        .day-color option:nth-child(2) { color: #e67e22; } /* ಸೋಮವಾರ */
-        .day-color option:nth-child(3) { color: #f1c40f; } /* ಮಂಗಳವಾರ */
-        .day-color option:nth-child(4) { color: #27ae60; } /* ಬುಧವಾರ */
-        .day-color option:nth-child(5) { color: #2980b9; } /* ಗುರುವಾರ */
-        .day-color option:nth-child(6) { color: #8e44ad; } /* ಶುಕ್ರವಾರ */
-        .day-color option:nth-child(7) { color: #c0392b; } /* ಶನಿವಾರ */
+        .day-color option:nth-child(2) { color: #e67e22; }
+        .day-color option:nth-child(3) { color: #f1c40f; }
+        .day-color option:nth-child(4) { color: #27ae60; }
+        .day-color option:nth-child(5) { color: #2980b9; }
+        .day-color option:nth-child(6) { color: #8e44ad; }
+        .day-color option:nth-child(7) { color: #c0392b; }
 
         .footer-row { font-weight: bold; background-color: #27ae60 !important; color: white; }
         .sig-table { margin-top: 20px; border: none; }
         .sig-table td { border: none; padding: 15px; text-align: center; vertical-align: bottom; color: #2c3e50; font-weight: bold; }
-        .creator-name { font-size: 10px; font-style: italic; color: #f1c40f; float: right; }
+        .creator-name { font-size: 11px; font-style: italic; color: #f1c40f; float: right; }
+        
+        .print-btn { background-color: #e74c3c; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 14px; margin-top: 20px; border-radius: 5px; font-weight: bold; }
+        @media print { .print-btn { display: none; } }
     </style>
 </head>
 <body>
 
-<h3 style="text-align: center;">2026-27 ನೇ ಸಾಲಿನ ಪಿ.ಎಂ. ಪೋಷಣ್ -ಮಧ್ಯಾಹ್ನ ಉಪಹಾರ ಯೋಜನೆಯ ದೈನಂದಿನ ಪೂರಕ ಪೌಷ್ಟಿಕ ಆಹಾರ (ಮೊಟ್ಟೆ/ಬಾಳೆಹಣ್ಣು) ವಿತರಣೆ ನಮೂನೆ</h3>
+<h3 style="text-align: center;">2026-27 ನೇ ಸಾಲಿನ ಪಿ.ಎಂ. ಪೋಷಣ್ -ಮಧ್ಯಾಹ್ನ ಉಪಹಾರ ಯೋಜನೆಯ ದೈನಂದಿನ ಪೂರಕ ಪೌಷ್ಟಿಕ ಆಹಾರ ವಿತರಣೆ ನಮೂನೆ</h3>
 
 <div class="header-section">
     ಶಾಲೆಯ ಹೆಸರು: <input type="text" style="width: 200px;"> &nbsp; ಕ್ಲಸ್ಟರ್: <input type="text" style="width: 150px;"> &nbsp; ತಿಂಗಳು/ವರ್ಷ: <input type="text" style="width: 100px;"> 
@@ -62,8 +63,8 @@
 
 <table id="dataTable">
     <tr>
-        <th style="width: 25px;">ದಿನ</th><th class="col-week">ವಾರ</th><th class="col-attendance">ದಾಖಲಾತಿ</th><th class="col-attendance">ಹಾಜರಾತಿ</th><th>ಮೊಟ್ಟೆ</th><th class="col-banana">ಬಾಳೆ</th><th>ಒಟ್ಟು</th>
-        <th style="width: 25px;">ದಿನ</th><th class="col-week">ವಾರ</th><th class="col-attendance">ದಾಖಲಾತಿ</th><th class="col-attendance">ಹಾಜರಾತಿ</th><th>ಮೊಟ್ಟೆ</th><th class="col-banana">ಬಾಳೆ</th><th>ಒಟ್ಟು</th>
+        <th class="col-std">ದಿನ</th><th class="col-std">ವಾರ</th><th class="col-std">ದಾಖ</th><th class="col-std">ಹಾಜ</th><th class="col-std">ಮೊಟ್ಟೆ</th><th class="col-std">ಬಾಳೆ</th><th class="col-std">ಒಟ್ಟು</th>
+        <th class="col-std">ದಿನ</th><th class="col-std">ವಾರ</th><th class="col-std">ದಾಖ</th><th class="col-std">ಹಾಜ</th><th class="col-std">ಮೊಟ್ಟೆ</th><th class="col-std">ಬಾಳೆ</th><th class="col-std">ಒಟ್ಟು</th>
     </tr>
     <script>
         const days = ["ಕ್ಲಿಕ್ ಮಾಡಿ", "ಸೋಮ", "ಮಂಗಳ", "ಬುಧ", "ಗುರು", "ಶುಕ್ರ", "ಶನಿ","ಭಾನು"];
@@ -90,14 +91,16 @@
 
 <table style="margin-top:10px;">
     <tr class="footer-row">
-        <td>ಶಾಲಾ ನಡೆದ ದಿನಗಳು</td><td>ತಿಂಗಳ  ಎಲ್ಲಾ ಮಕ್ಕಳ<br> ಒಟ್ಟು ಹಾಜರಾತಿ</td><td> ತಿಂಗಳ ಒಟ್ಟು ಮೊಟ್ಟೆ <br>ಫಲಾನುಭವಿಗಳ ಸಂಖ್ಯೆ</td><td>ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು <br> ಫಲಾನುಭವಿಗಳ ಸಂಖ್ಯೆ</td>
-        <td> ತಿಂಗಳ  ಮೊಟ್ಟೆ & ಬಾಳೆ ಒಟ್ಟು ಫಲಾನುಭವಿಗಳು</td><td> ತಿಂಗಳ ಒಟ್ಟು ಮೊಟ್ಟೆ<br> ಖರೀದಿ ವೆಚ್ಚ (x6)</td><td> ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು<br> ಖರೀದಿ ವೆಚ್ಚ (x6)</td><td>ತಿಂಗಳ ಒಟ್ಟು  ಬಾಳೆಹಣ್ಣು<br>ಮೊಟ್ಟೆ ಖರೀದಿ ವೆಚ್ಚ</td>
+        <td>ಶಾಲಾ ನಡೆದ ದಿನಗಳು</td><td>ತಿಂಗಳ ಎಲ್ಲಾ ಮಕ್ಕಳ ಒಟ್ಟು ಹಾಜರಾತಿ</td><td>ತಿಂಗಳ ಒಟ್ಟು ಮೊಟ್ಟೆ ಫಲಾನುಭವಿಗಳ ಸಂಖ್ಯೆ</td><td>ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು ಫಲಾನುಭವಿಗಳ ಸಂಖ್ಯೆ</td>
+        <td>ತಿಂಗಳ ಮೊಟ್ಟೆ & ಬಾಳೆ ಒಟ್ಟು ಫಲಾನುಭವಿಗಳು</td><td>ತಿಂಗಳ ಒಟ್ಟು ಮೊಟ್ಟೆ ಖರೀದಿ ವೆಚ್ಚ (x6)</td><td>ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು ಖರೀದಿ ವೆಚ್ಚ (x6)</td><td>ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು ಮೊಟ್ಟೆ ಖರೀದಿ ವೆಚ್ಚ</td>
     </tr>
     <tr>
         <td id="fDays">0</td><td id="fAtt">0</td><td id="fEgg">0</td><td id="fBan">0</td>
         <td id="fSum">0</td><td id="fCostE">0</td><td id="fCostB">0</td><td id="fTotal">0</td>
     </tr>
 </table>
+
+<button class="print-btn" onclick="window.print()">ಈ ನಮೂನೆಯನ್ನು ಪ್ರಿಂಟ್ ಮಾಡಿ</button>
 
 <table class="sig-table">
     <tr>
