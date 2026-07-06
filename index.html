@@ -4,47 +4,46 @@
     <meta charset="UTF-8">
     <title>ಪಿ.ಎಂ. ಪೋಷಣ್ - ನಮೂನೆ 7</title>
     <style>
-        /* ಫಾಂಟ್ ಗಾತ್ರವನ್ನು 8px ನಿಂದ 11px ಗೆ ಹೆಚ್ಚಿಸಲಾಗಿದೆ */
-        body { font-family: 'Arial', sans-serif; font-size: 11px; padding: 10px; background-color: #f9f9f9; }
+        body { font-family: 'Arial', sans-serif; font-size: 8px; padding: 10px; background-color: #f9f9f9; }
         table { width: 100%; border-collapse: collapse; margin-top: 5px; table-layout: fixed; background-color: #fff; }
-        th, td { border: 1px solid #333; padding: 5px; text-align: center; }
+        th, td { border: 1px solid #333; padding: 6px 3px; text-align: center; }
         
-        h3 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .header-section { 
-            background: linear-gradient(to right, #3498db, #2980b9); 
-            color: white; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-weight: bold; 
-        }
-        .header-section input { color: #000; font-weight: bold; border-radius: 3px; padding: 4px; }
-
-        th { background-color: #34495e; color: white; }
+        h3 { color: #c0392b; border-bottom: 3px solid #e74c3c; padding-bottom: 10px; font-size: 20px; text-transform: uppercase; }
+        .header-section { background: linear-gradient(to right, #3498db, #2980b9); color: white; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-weight: bold; }
+        .header-section input { color: #000; font-weight: bold; border-radius: 3px; padding: 4px 2px; }
+        th { background-color: #34495e; color: white; padding: 8px 3px; }
         
-        /* ಕಾಲಂ ಗಾತ್ರ */
-        .col-std { width: 40px; } 
+        .col-uniform { width: 40px; } 
+        .col-week { width: 85px; } 
+        .col-total { width: 35px; } 
         
-        input, select { width: 100%; border: 1px solid #ccc; text-align: center; box-sizing: border-box; font-size: 11px; font-weight: bold; padding: 2px; }
+        input, select { width: 100%; border: 1px solid #ccc; text-align: center; box-sizing: border-box; font-size: 8px; font-weight: bold; padding: 4px 0; }
         
-        .day-color option:nth-child(2) { color: #e67e22; }
-        .day-color option:nth-child(3) { color: #f1c40f; }
-        .day-color option:nth-child(4) { color: #27ae60; }
-        .day-color option:nth-child(5) { color: #2980b9; }
-        .day-color option:nth-child(6) { color: #8e44ad; }
-        .day-color option:nth-child(7) { color: #c0392b; }
-
         .footer-row { font-weight: bold; background-color: #27ae60 !important; color: white; }
-        .sig-table { margin-top: 20px; border: none; }
-        .sig-table td { border: none; padding: 15px; text-align: center; vertical-align: bottom; color: #2c3e50; font-weight: bold; }
-        .creator-name { font-size: 11px; font-style: italic; color: #f1c40f; float: right; }
-        
-        .print-btn { background-color: #e74c3c; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 14px; margin-top: 20px; border-radius: 5px; font-weight: bold; }
-        @media print { .print-btn { display: none; } }
+        .sig-table { margin-top: 25px; border: none; }
+        .sig-table td { border: none; padding: 20px; text-align: center; vertical-align: bottom; color: #2c3e50; font-weight: bold; }
+        .creator-name { font-size: 10px; font-style: italic; color: #f1c40f; float: right; }
+
+        /* ಪ್ರಿಂಟ್ ಬಟನ್ ಶೈಲಿ */
+        .print-btn-container { text-align: center; margin-top: 20px; }
+        .print-btn { background-color: #2980b9; color: white; border: none; padding: 8px 20px; font-size: 12px; font-weight: bold; cursor: pointer; border-radius: 4px; }
+        .print-btn:hover { background-color: #3498db; }
+
+        /* A4 ಒಂದೇ ಪೇಜ್‌ನಲ್ಲಿ ಪ್ರಿಂಟ್ ಆಗಲು ಸೆಟ್ಟಿಂಗ್ಸ್ */
+        @media print {
+            body { background-color: #fff; padding: 0; margin: 0; }
+            .print-btn-container { display: none; } /* ಪ್ರಿಂಟ್‌ನಲ್ಲಿ ಬಟನ್ ಕಾಣಿಸುವುದಿಲ್ಲ */
+            @page { size: A4 portrait; margin: 8mm; }
+        }
     </style>
 </head>
 <body>
 
-<h3 style="text-align: center;">2026-27 ನೇ ಸಾಲಿನ ಪಿ.ಎಂ. ಪೋಷಣ್ -ಮಧ್ಯಾಹ್ನ ಉಪಹಾರ ಯೋಜನೆಯ ದೈನಂದಿನ ಪೂರಕ ಪೌಷ್ಟಿಕ ಆಹಾರ ವಿತರಣೆ ನಮೂನೆ</h3>
+<h3 style="text-align: center;">2026-27 ನೇ ಸಾಲಿನ ಪಿ.ಎಂ. ಪೋಷಣ್ -ಮಧ್ಯಾಹ್ನ ಉಪಹಾರ ಯೋಜನೆಯ ದೈನಂದಿನ ಪೂರಕ ಪೌಷ್ಟಿಕ ಆಹಾರ (ಮೊಟ್ಟೆ/ಬಾಳೆಹಣ್ಣು) ವಿತರಣೆ ನಮೂನೆ</h3>
 
 <div class="header-section">
-    ಶಾಲೆಯ ಹೆಸರು: <input type="text" style="width: 200px;"> &nbsp; ಕ್ಲಸ್ಟರ್: <input type="text" style="width: 150px;"> &nbsp; ತಿಂಗಳು/ವರ್ಷ: <input type="text" style="width: 100px;"> 
+    <!-- ಶಾಲೆಯ ಹೆಸರು ಇನ್‌ಪುಟ್ ಬಾಕ್ಸ್ ಅನ್ನು 250px ಗೆ ಅಗಲಗೊಳಿಸಲಾಗಿದೆ -->
+    ಶಾಲೆಯ ಹೆಸರು: <input type="text" style="width: 300px;"> &nbsp; ಕ್ಲಸ್ಟರ್: <input type="text" style="width: 150px;"> &nbsp; ತಿಂಗಳು/ವರ್ಷ: <input type="text" style="width: 100px;"> 
     <span class="creator-name">ರಚನೆ: ಮನೋಹರ್ ಕೆಜಿಎಫ್</span>
 </div>
 
@@ -63,26 +62,32 @@
 
 <table id="dataTable">
     <tr>
-        <th class="col-std">ದಿನ</th><th class="col-std">ವಾರ</th><th class="col-std">ದಾಖ</th><th class="col-std">ಹಾಜ</th><th class="col-std">ಮೊಟ್ಟೆ</th><th class="col-std">ಬಾಳೆ</th><th class="col-std">ಒಟ್ಟು</th>
-        <th class="col-std">ದಿನ</th><th class="col-std">ವಾರ</th><th class="col-std">ದಾಖ</th><th class="col-std">ಹಾಜ</th><th class="col-std">ಮೊಟ್ಟೆ</th><th class="col-std">ಬಾಳೆ</th><th class="col-std">ಒಟ್ಟು</th>
+        <th style="width: 25px;">ದಿನಾಂಕ</th><th class="col-week">ವಾರ</th><th class="col-uniform">ದಾಖಲಾತಿ</th><th class="col-uniform">ಹಾಜರಾತಿ</th><th class="col-uniform">ಮೊಟ್ಟೆ</th><th class="col-uniform">ಬಾಳೆ ಹಣ್ಣು</th><th class="col-total">ಒಟ್ಟು</th>
+        <th style="width: 25px;">ದಿನಾಂಕ</th><th class="col-week">ವಾರ</th><th class="col-uniform">ದಾಖಲಾತಿ</th><th class="col-uniform">ಹಾಜರಾತಿ</th><th class="col-uniform">ಮೊಟ್ಟೆ</th><th class="col-uniform">ಬಾಳೆ ಹಣ್ಣು</th><th class="col-total">ಒಟ್ಟು</th>
     </tr>
     <script>
-        const days = ["ಕ್ಲಿಕ್ ಮಾಡಿ", "ಸೋಮ", "ಮಂಗಳ", "ಬುಧ", "ಗುರು", "ಶುಕ್ರ", "ಶನಿ","ಭಾನು"];
+        const dayColors = { "ಸೋಮ": "#e74c3c", "ಮಂಗಳ": "#f1c40f", "ಬುಧ": "#3498db", "ಗುರು": "#9b59b6", "ಶುಕ್ರ": "#2ecc71", "ಶನಿ": "#e67e22", "ಭಾನು": "#95a5a6" };
+        function updateColor(select) {
+            if(select.value === "ಕ್ಲಿಕ್ ಮಾಡಿ") { select.style.backgroundColor = "white"; select.style.color = "black"; return; }
+            select.style.backgroundColor = dayColors[select.value];
+            select.style.color = (select.value === "ಸೋಮ" || select.value === "ಶನಿ" || select.value === "ಭಾನು") ? "white" : "black";
+        }
         function getDaySelect() {
-            let html = '<select class="day-color">';
-            days.forEach(d => html += `<option value="${d}">${d}</option>`);
+            let html = '<select onchange="updateColor(this)">';
+            html += '<option value="ಕ್ಲಿಕ್ ಮಾಡಿ">ಕ್ಲಿಕ್ ಮಾಡಿ</option>';
+            Object.keys(dayColors).forEach(d => html += `<option value="${d}">${d}</option>`);
             return html + '</select>';
         }
         for(let i=1; i<=16; i++) {
             let d2 = (i+16 <= 31) ? (i+16) : "";
             document.write(`<tr>
                 <td style="background-color:#f1f2f6">${i}</td><td>${getDaySelect()}</td>
-                <td><input type="number"></td><td><input type="number" class="att" oninput="calc()"></td>
-                <td><input type="number" class="egg" oninput="calc()"></td><td><input type="number" class="ban" oninput="calc()"></td>
+                <td><input type="number" class="col-uniform"></td><td><input type="number" class="att col-uniform" oninput="calc()"></td>
+                <td><input type="number" class="egg col-uniform" oninput="calc()"></td><td><input type="number" class="ban col-uniform" oninput="calc()"></td>
                 <td class="rowSum" style="background-color:#f1f2f6">0</td>
                 <td style="background-color:#f1f2f6">${d2}</td><td>${d2 ? getDaySelect() : ""}</td>
-                <td><input type="number"></td><td><input type="number" class="att" oninput="calc()"></td>
-                <td><input type="number" class="egg" oninput="calc()"></td><td><input type="number" class="ban" oninput="calc()"></td>
+                <td><input type="number" class="col-uniform"></td><td><input type="number" class="att col-uniform" oninput="calc()"></td>
+                <td><input type="number" class="egg col-uniform" oninput="calc()"></td><td><input type="number" class="ban col-uniform" oninput="calc()"></td>
                 <td class="rowSum" style="background-color:#f1f2f6">0</td>
             </tr>`);
         }
@@ -91,16 +96,14 @@
 
 <table style="margin-top:10px;">
     <tr class="footer-row">
-        <td>ಶಾಲಾ ನಡೆದ ದಿನಗಳು</td><td>ತಿಂಗಳ ಎಲ್ಲಾ ಮಕ್ಕಳ ಒಟ್ಟು ಹಾಜರಾತಿ</td><td>ತಿಂಗಳ ಒಟ್ಟು ಮೊಟ್ಟೆ ಫಲಾನುಭವಿಗಳ ಸಂಖ್ಯೆ</td><td>ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು ಫಲಾನುಭವಿಗಳ ಸಂಖ್ಯೆ</td>
-        <td>ತಿಂಗಳ ಮೊಟ್ಟೆ & ಬಾಳೆ ಒಟ್ಟು ಫಲಾನುಭವಿಗಳು</td><td>ತಿಂಗಳ ಒಟ್ಟು ಮೊಟ್ಟೆ ಖರೀದಿ ವೆಚ್ಚ (x6)</td><td>ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು ಖರೀದಿ ವೆಚ್ಚ (x6)</td><td>ತಿಂಗಳ ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು ಮೊಟ್ಟೆ ಖರೀದಿ ವೆಚ್ಚ</td>
+        <td>ಶಾಲಾ ನಡೆದ ದಿನಗಳು</td><td>ತಿಂಗಳ ಒಟ್ಟು ಹಾಜರಾತಿ</td><td>ಒಟ್ಟು ಮೊಟ್ಟೆ</td><td>ಒಟ್ಟು ಬಾಳೆಹಣ್ಣು</td>
+        <td>ಒಟ್ಟು ಫಲಾನುಭವಿ</td><td>ಮೊಟ್ಟೆ ವೆಚ್ಚ (x6)</td><td>ಬಾಳೆಹಣ್ಣು ವೆಚ್ಚ (x6)</td><td>ಒಟ್ಟು ವೆಚ್ಚ</td>
     </tr>
     <tr>
         <td id="fDays">0</td><td id="fAtt">0</td><td id="fEgg">0</td><td id="fBan">0</td>
         <td id="fSum">0</td><td id="fCostE">0</td><td id="fCostB">0</td><td id="fTotal">0</td>
     </tr>
 </table>
-
-<button class="print-btn" onclick="window.print()">ಈ ನಮೂನೆಯನ್ನು ಪ್ರಿಂಟ್ ಮಾಡಿ</button>
 
 <table class="sig-table">
     <tr>
@@ -110,21 +113,42 @@
     </tr>
 </table>
 
+<!-- ಪ್ರಿಂಟ್ ಬಟನ್ -->
+<div class="print-btn-container">
+    <button class="print-btn" onclick="window.print()">ಪ್ರಿಂಟ್ ತಗೆದುಕೊಳ್ಳಿ</button>
+</div>
+
 <script>
     function calcEnrol() {
         let total = 0; document.querySelectorAll('.cls').forEach(i => total += Number(i.value));
         document.getElementById('totalEnrol').innerText = total;
     }
     function calc() {
-        let atts = document.querySelectorAll('.att'), eggs = document.querySelectorAll('.egg'), bans = document.querySelectorAll('.ban');
-        let fDays=0, fAtt=0, fEgg=0, fBan=0;
-        document.querySelectorAll('.rowSum').forEach((el, i) => { el.innerText = Number(eggs[i].value) + Number(bans[i].value); });
+        let eggs = document.querySelectorAll('.egg');
+        let bans = document.querySelectorAll('.ban');
+        let rowSums = document.querySelectorAll('.rowSum');
+        let fEgg = 0, fBan = 0;
+
+        for (let i = 0; i < eggs.length; i++) {
+            let e = Number(eggs[i].value) || 0;
+            let b = Number(bans[i].value) || 0;
+            rowSums[i].innerText = e + b;
+            fEgg += e;
+            fBan += b;
+        }
+
+        // ಹಾಜರಾತಿ ಲೆಕ್ಕಾಚಾರ
+        let atts = document.querySelectorAll('.att');
+        let fAtt = 0, fDays = 0;
         atts.forEach(a => { if(Number(a.value) > 0) fDays++; fAtt += Number(a.value); });
-        eggs.forEach(e => fEgg += Number(e.value)); bans.forEach(b => fBan += Number(b.value));
-        document.getElementById('fDays').innerText = fDays; document.getElementById('fAtt').innerText = fAtt;
-        document.getElementById('fEgg').innerText = fEgg; document.getElementById('fBan').innerText = fBan;
+
+        document.getElementById('fDays').innerText = fDays;
+        document.getElementById('fAtt').innerText = fAtt;
+        document.getElementById('fEgg').innerText = fEgg;
+        document.getElementById('fBan').innerText = fBan;
         document.getElementById('fSum').innerText = fEgg + fBan;
-        document.getElementById('fCostE').innerText = fEgg * 6; document.getElementById('fCostB').innerText = fBan * 6;
+        document.getElementById('fCostE').innerText = fEgg * 6;
+        document.getElementById('fCostB').innerText = fBan * 6;
         document.getElementById('fTotal').innerText = (fEgg + fBan) * 6;
     }
 </script>
